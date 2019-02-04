@@ -1,4 +1,4 @@
-const SERVER_URL = "http://localhost/maskitbackend/php/";
+const SERVER_URL = "http://sainsgo.com/maskitbackend/php/";
 var menuShown = false;
 
 $(document).ready(function () {
