@@ -1,0 +1,8 @@
+#add {
+    background-color: #3498db;
+    cursor: pointer;
+}
+
+#add:active {
+    background-color: #2980b9;
+}

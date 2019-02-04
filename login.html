@@ -1,0 +1,31 @@
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href="css/global.css" rel="stylesheet">
+		<script src="js/jquery.js"></script>
+		<script src="js/global.js"></script>
+		<script src="js/login.js"></script>
+	</head>
+	<body>
+		<div class="main-container">
+			<div style="position: fixed; left: 0; top: 0; width: 100%; height: 100%; background-image: url('img/login-bg.jpg'); background-attachment: fixed; background-size: cover; object-fit: cover; background-position: center center;"></div>
+			<div style="position: fixed; left: 0; top: 0; background-color: rgba(27, 43, 60, .9); width: 100%; height: 100%; display: flex; flex-flow: column nowrap; align-items: center;">
+				<img src="img/icon.png" width="100px" height="100px" style="margin-top: 80px;">
+				<div style="position: relative; margin-top: 50px; height: 40px; width: 100%;">
+					<input id="email" class="flat-input" style="position: absolute; left: 0; top: 0; width: calc(100% - 60px); height: 100%; padding-left: 50px;" placeholder="Email">
+					<div style="width: 60px; height: 100%; position: absolute; left: 20px; top: 0; display: flex; justify-content: center; align-items: center;">
+						<img src="img/user.png" width="15px" height="15px" style="margin-left: 10px;">
+					</div>
+				</div>
+				<div style="position: relative; margin-top: 10px; height: 40px; width: 100%;">
+					<input id="password" type="password" class="flat-input" style="position: absolute; left: 0; top: 0; width: calc(100% - 60px); height: 100%; padding-left: 50px;" placeholder="Kata sandi">
+					<div style="width: 60px; height: 100%; position: absolute; left: 20px; top: 0; display: flex; justify-content: center; align-items: center;">
+						<img src="img/pass.png" width="15px" height="15px" style="margin-left: 10px;">
+					</div>
+				</div>
+				<div id="error" style="display: none; margin-left: 35px; margin-top: 5px; color: #e74c3c; margin-bottom: -5px; font-family: 'PalanquinBold', Arial;">&nbsp;</div>
+				<button onclick="login()" class="flat-button" style="margin-top: 10px;">MASUK</button>
+			</div>
+		</div>
+	</body>
+</html>
