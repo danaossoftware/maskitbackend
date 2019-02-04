@@ -7,48 +7,61 @@
     <link href="css/global.css" rel="stylesheet">
 </head>
 <body>
-<div style="width: 100%; height: 100%; display: flex; flex-flow: column nowrap;">
-    <div style="width: 100%; height: 40px; display: flex; flex-flow: row nowrap;">
-        <div id="menu" onclick="openMenu()" style="width: 50px; height: 100%; display: flex; align-items: center;">
-            <img src="img/menu.png" width="20px" height="20px" style="margin-left: 10px;">
+<div style="width: 100%; height: 100%; overflow-x: hidden!important; position: relative;">
+    <div style="width: 100%; height: 100%; display: flex; flex-flow: column nowrap;">
+        <div style="width: 100%; height: 40px; display: flex; flex-flow: row nowrap;">
+            <div id="menu" onclick="openMenu()" style="width: 50px; height: 100%; display: flex; align-items: center;">
+                <img src="img/menu.png" width="20px" height="20px" style="margin-left: 10px;">
+            </div>
+            <div style="width: 100%; height: 100%; display: flex; flex-flow: row nowrap; align-items: center; background-color: #3fd598;">
+                <div style="color: white; font-family: PalanquinBold; font-size: 18px; margin-left: 20px;">DAFTAR
+                    PENYAKIT
+                </div>
+            </div>
         </div>
-        <div style="width: 100%; height: 100%; display: flex; flex-flow: row nowrap; align-items: center; background-color: #3fd598;">
-            <div style="color: white; font-family: PalanquinBold; font-size: 18px; margin-left: 20px;">DAFTAR PENYAKIT</div>
-        </div>
-    </div>
-    <div id="diseases" style="width: 100%; display: flex; flex-flow: column nowrap; padding: 10px;">
-    </div>
-</div>
-<div id="overlay" onclick="closeMenu()" style="display: none; position: fixed; left: 0; top: 0; width: 100%; height: 100%;"></div>
-<div id="menu-container" style="transition: margin-left .5s; position: fixed; left: 0; top: 0; height: 100%; margin-left: -250px; width: 250px; background-color: #0b7abf; display: flex; flex-flow: column nowrap;">
-    <div style="width: 100%; display: flex; align-items: center; margin-top: 50px; flex-flow: column nowrap;">
-        <div style="width: 80px; height: 80px; background-color: white; -webkit-border-radius: 50%;-moz-border-radius: 50%;border-radius: 50%; display: flex; justify-content: center; align-items: center;">
-            <img src="img/icon.png" width="78px" height="78px">
+        <div id="diseases" style="width: 100%; display: flex; flex-flow: column nowrap; padding: 10px;">
         </div>
     </div>
-    <div onclick="openDiseases()" class="menu-item" style="width: 100%; height: 40px; display: flex; flex-flow: row nowrap; align-items: center; margin-top: 30px;">
-        <img src="img/bacteria.png" width="20px" height="20px" style="margin-left: 20px;">
-        <div style="color: white; font-size: 18px; margin-left: 20px;">Penyakit</div>
+    <div id="overlay" onclick="closeMenu()"
+         style="display: none; position: fixed; left: 0; top: 0; width: 100%; height: 100%;"></div>
+    <div id="menu-container"
+         style="transition: margin-left .5s; position: fixed; left: 0; top: 0; height: 100%; margin-left: -250px; width: 250px; background-color: #0b7abf; display: flex; flex-flow: column nowrap;">
+        <div style="width: 100%; display: flex; align-items: center; margin-top: 50px; flex-flow: column nowrap;">
+            <div style="width: 80px; height: 80px; background-color: white; -webkit-border-radius: 50%;-moz-border-radius: 50%;border-radius: 50%; display: flex; justify-content: center; align-items: center;">
+                <img src="img/icon.png" width="78px" height="78px">
+            </div>
+        </div>
+        <div onclick="openDiseases()" class="menu-item"
+             style="width: 100%; height: 40px; display: flex; flex-flow: row nowrap; align-items: center; margin-top: 30px;">
+            <img src="img/bacteria.png" width="20px" height="20px" style="margin-left: 20px;">
+            <div style="color: white; font-size: 18px; margin-left: 20px;">Penyakit</div>
+        </div>
+        <div onclick="openDiseaseStatistics()" class="menu-item"
+             style="width: 100%; height: 40px; display: flex; flex-flow: row nowrap; align-items: center;">
+            <img src="img/sneeze.png" width="20px" height="20px" style="margin-left: 20px;">
+            <div style="color: white; font-size: 18px; margin-left: 20px;">Statistik Penyakit</div>
+        </div>
+        <div onclick="openUsers()" class="menu-item"
+             style="width: 100%; height: 40px; display: flex; flex-flow: row nowrap; align-items: center;">
+            <img src="img/user-2.png" width="20px" height="20px" style="margin-left: 20px;">
+            <div style="color: white; font-size: 18px; margin-left: 20px;">Pengguna</div>
+        </div>
+        <div onclick="openSerialNumbers()" class="menu-item"
+             style="width: 100%; height: 40px; display: flex; flex-flow: row nowrap; align-items: center;">
+            <img src="img/coupon.png" width="20px" height="20px" style="margin-left: 20px;">
+            <div style="color: white; font-size: 18px; margin-left: 20px;">Nomor Serial</div>
+        </div>
+        <div onclick="logout()" class="menu-item"
+             style="width: 100%; height: 40px; display: flex; flex-flow: row nowrap; align-items: center;">
+            <img src="img/logout.png" width="20px" height="20px" style="margin-left: 20px;">
+            <div style="color: white; font-size: 18px; margin-left: 20px;">Keluar</div>
+        </div>
     </div>
-    <div onclick="openDiseaseStatistics()" class="menu-item" style="width: 100%; height: 40px; display: flex; flex-flow: row nowrap; align-items: center;">
-        <img src="img/sneeze.png" width="20px" height="20px" style="margin-left: 20px;">
-        <div style="color: white; font-size: 18px; margin-left: 20px;">Statistik Penyakit</div>
+    <div style="box-shadow: 0 -4px 8px rgba(0, 0, 0, .5); background-color: white; width: 100%; padding-top: 10px; padding-bottom: 10px; position: fixed; bottom: 0; right: 0; display: flex; flex-flow: row nowrap; justify-content: flex-end; align-items: center;">
+        <button onclick="addDisease()" class="button1"
+                style="padding-left: 20px; padding-right: 20px; margin-right: 10px;">TAMBAHKAN PENYAKIT
+        </button>
     </div>
-    <div onclick="openUsers()" class="menu-item" style="width: 100%; height: 40px; display: flex; flex-flow: row nowrap; align-items: center;">
-        <img src="img/user-2.png" width="20px" height="20px" style="margin-left: 20px;">
-        <div style="color: white; font-size: 18px; margin-left: 20px;">Pengguna</div>
-    </div>
-    <div onclick="openSerialNumbers()" class="menu-item" style="width: 100%; height: 40px; display: flex; flex-flow: row nowrap; align-items: center;">
-        <img src="img/coupon.png" width="20px" height="20px" style="margin-left: 20px;">
-        <div style="color: white; font-size: 18px; margin-left: 20px;">Nomor Serial</div>
-    </div>
-    <div onclick="logout()" class="menu-item" style="width: 100%; height: 40px; display: flex; flex-flow: row nowrap; align-items: center;">
-        <img src="img/logout.png" width="20px" height="20px" style="margin-left: 20px;">
-        <div style="color: white; font-size: 18px; margin-left: 20px;">Keluar</div>
-    </div>
-</div>
-<div style="box-shadow: 0 -4px 8px rgba(0, 0, 0, .5); background-color: white; width: 100%; padding-top: 10px; padding-bottom: 10px; position: fixed; bottom: 0; right: 0; display: flex; flex-flow: row nowrap; justify-content: flex-end; align-items: center;">
-    <button onclick="addDisease()" class="button1" style="padding-left: 20px; padding-right: 20px; margin-right: 10px;">TAMBAHKAN PENYAKIT</button>
 </div>
 </body>
 </html>
