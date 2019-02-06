@@ -19,8 +19,8 @@ function getIP() {
 }
 
 function getUserID() {
-    $c = new mysqli("localhost", "u954666570_pulsa", "HelloWorld123");
-    $c->select_db("u954666570_pulsa");
+    $c = new mysqli("localhost", "u2759931_maskitadmin2", "HelloWorld123");
+    $c->select_db("u2759931_maskit2");
     $ip = getIP();
     $results = $c->query("SELECT * FROM sessions WHERE ip='" . $ip . "'");
     if ($results && $results->num_rows > 0) {

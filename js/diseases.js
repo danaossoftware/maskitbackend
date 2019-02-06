@@ -68,7 +68,8 @@ function diseaseAdded(diseaseName, found, mostYears, deathCase, history) {
                 "<div style='margin-left: 20px; font-family: PalanquinBold; color: white; font-size: 18px;'>"+diseaseName+"</div>"+
                 "</div>"
             );
-            Native.hideLoadingDialog();
+            setDiseaseClickListener();
+            //Native.hideLoadingDialog();
         }
     });
 }
@@ -147,4 +148,8 @@ function diseaseEditted(id, name, found, mostYears, deathCase, history) {
             getDiseases();
         }
     });
+}
+
+function backKey() {
+    Native.finishApp();
 }
