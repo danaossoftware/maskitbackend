@@ -4,7 +4,7 @@
 		<script src="js/global.js"></script>
 		<script>
 			$(document).ready(function() {
-				get('http://sainsgo.com/maskitbackend/php/check-session.php', null, function(a) {
+				get(SERVER_URL+'check-session.php', null, function(a) {
 					var responseCode = parseInt(a);
 					if (responseCode == 0) {
 						window.location.href = "home.html";
