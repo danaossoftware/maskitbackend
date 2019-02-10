@@ -7,22 +7,16 @@ function login() {
         $("#error").show();
         return;
     }
-    $.ajax({
-        type: 'GET',
-        url: SERVER_URL+"login.php",
-        data: {'email': email, 'password': password},
-        dataType: 'text',
-        cache: false,
-        success: function(a) {
-            if (a == -1) {
-                $("#error").html("Admin tidak ditemukan");
-                $("#error").show();
-            } else if (a == -2) {
-                $("#error").html("Kata sandi salah");
-                $("#error").show();
-            } else if (a == 0) {
-                window.location.href = "home.html";
-            }
+    get(SERVER_URL+"login.php", {'email': email, 'password': password}, function(a) {
+        console.log(a);
+        if (a == -1) {
+            $("#error").html("Admin tidak ditemukan");
+            $("#error").show();
+        } else if (a == -2) {
+            $("#error").html("Kata sandi salah");
+            $("#error").show();
+        } else if (a == 0) {
+            window.location.href = "home.html";
         }
     });
 }

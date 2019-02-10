@@ -1,20 +1,15 @@
 <html>
 	<head>
 		<script src="js/jquery.js"></script>
+		<script src="js/global.js"></script>
 		<script>
 			$(document).ready(function() {
-				$.ajax({
-					type: 'GET',
-					url: 'http://sainsgo.com/maskitbackend/php/check-session.php',
-					dataType: 'text',
-					cache: false,
-					success: function(a) {
-						var responseCode = parseInt(a);
-						if (responseCode == 0) {
-							window.location.href = "home.html";
-						} else if (responseCode == -1) {
-							window.location.href = "login.html";
-						}
+				get('http://192.168.43.139/maskitbackend/php/check-session.php', null, function(a) {
+					var responseCode = parseInt(a);
+					if (responseCode == 0) {
+						window.location.href = "home.html";
+					} else if (responseCode == -1) {
+						window.location.href = "login.html";
 					}
 				});
 			});

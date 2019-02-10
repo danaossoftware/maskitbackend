@@ -41,6 +41,7 @@ body {
 }
 
 .flat-input {
+	flex-shrink: 0;
 	background-color: rgba(255, 255, 255, .5);
 	width: calc(100% - 120px);
 	margin-left: 30px;
@@ -52,6 +53,19 @@ body {
 
 .flat-input::placeholder {
 	color: #eeeeee;
+}
+
+.flat-input-2 {
+	flex-shrink: 0;
+	background-color: #eeeeee;
+	width: calc(100% - 60px);
+	margin-left: 20px;
+	margin-right: 20px;
+	height: 32px;
+	padding-left: 10px;
+	padding-right: 10px;
+	border: 0;
+	color: black;
 }
 
 .flat-button {
@@ -96,4 +110,63 @@ body {
 
 .button1:active {
 	background: linear-gradient(to left, #fc4a1a, #f7b733);
+}
+
+.menu-item-2 {
+	background-color: white;
+}
+
+.menu-item-2:active {
+	background-color: #eeeeee;
+}
+
+.flat-button-2 {
+	text-align: center;
+	user-select: none;
+	-moz-user-select: none;
+	border-radius: 4px;
+	transition: background-color 0.2s;
+	cursor: pointer;
+	margin-right: 10px;
+	margin-top: 10px;
+	color: #2270f3;
+	border: 0;
+	font-weight: bold;
+	font-size: 15px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+	flex-flow: row nowrap;
+	background-color: white;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	height: 30px;
+}
+
+.flat-button-2:hover {
+	background-color: #eeeeee;
+}
+
+.flat-button-2:active {
+	background-color: #cccccc;
+}
+
+.fab {
+	background-color: #3498db;
+	cursor: pointer;
+}
+
+.fab:active {
+	background-color: #2980b9;
+}
+
+#menu-container {
+	overflow-y: scroll;
+}
+
+div {
+    flex-shrink: 0;
 }

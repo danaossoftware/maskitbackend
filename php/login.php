@@ -11,6 +11,8 @@ if ($results && $results->num_rows > 0) {
         return;
     }
     $userId = $row["id"];
+    session_start();
+    $_SESSION["maskitbe_user_id"] = $userId;
     $ip = getIP();
     $c->query("INSERT INTO sessions (id, user_id, ip, last_active) VALUES ('" . uniqid() . "', '" . $userId . "', '" . $ip . "', " . round(microtime(true)*1000) . ")");
     echo 0;

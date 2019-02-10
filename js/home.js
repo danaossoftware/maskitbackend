@@ -1,3 +1,7 @@
 function backKey() {
-    Native.finishApp();
+    if (menuShown) {
+        closeMenu();
+    } else {
+        Native.finishApp();
+    }
 }
