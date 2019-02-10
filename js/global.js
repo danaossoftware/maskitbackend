@@ -1,4 +1,4 @@
-const SERVER_URL = "http://192.168.43.139/maskitbackend/php/";
+const SERVER_URL = "http://sainsgo.com/maskitbackend/php/";
 var menuShown = false;
 
 $(document).ready(function () {
