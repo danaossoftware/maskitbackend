@@ -170,3 +170,35 @@ body {
 div {
     flex-shrink: 0;
 }
+
+.blue-button {
+	padding-left: 10px;
+	padding-right: 10px;
+	background-color: #3498db;
+	border-radius: 5px;
+	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .3);
+	color: white;
+	cursor: pointer;
+	border: 0;
+	height: 25px;
+}
+
+.blue-button:active {
+	background-color: #2980b9;
+}
+
+.colorful-button {
+    background-image: linear-gradient(to right, #f12711, #f5af19);
+    height: 35px;
+    padding-left: 20px;
+    padding-right: 20px;
+    color: white;
+    border: 0;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .5);
+    cursor: pointer;
+}
+
+.colorful-button:active {
+    background-image: linear-gradient(to right, #f5af19, #f12711);
+}

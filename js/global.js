@@ -13,9 +13,14 @@ $(document).ready(function () {
 });
 
 function openMenu() {
-    $("#overlay").show();
-    $("#menu-container").css("margin-left", "0");
-    menuShown = true;
+    menuShown = !menuShown;
+    if (menuShown) {
+        $("#overlay").show();
+        $("#menu-container").css("margin-left", "0");
+    } else {
+        $("#overlay").hide();
+        $("#menu-container").css("margin-left", "-250px");
+    }
 }
 
 function closeMenu() {
@@ -44,6 +49,10 @@ function openSerialNumbers() {
     window.location.href = "masks.html";
 }
 
+function openRedeems() {
+    window.location.href = "redeems.html";
+}
+
 function logout() {
     get(SERVER_URL+'logout.php', null, function(a) {
         window.location.href = "login.html";
@@ -64,6 +73,7 @@ function get(url, params, successFunc) {
             type: 'GET',
             url: url,
             dataType: 'text',
+            cache: false,
             success: function (data, textStatus, request) {
                 successFunc(data);
             }
@@ -74,6 +84,7 @@ function get(url, params, successFunc) {
             url: url,
             data: params,
             dataType: 'text',
+            cache: false,
             success: function (data, textStatus, request) {
                 successFunc(data);
             }
@@ -94,3 +105,35 @@ function post(url, fd, successFunc) {
         }
     });
 }
+
+function getDateString(dateInt) {
+    var date = new Date(dateInt);
+    var day = date.getDate();
+    var month = date.getMonth();
+    var year = date.getFullYear();
+    var dateString = ""+day;
+    dateString += " ";
+    dateString += getMonthName(month);
+    dateString += " ";
+    dateString += year;
+    return dateString;
+}
+
+function getMonthNames() {
+    return ["Januari", "Februari", "Maret", "April", "Mei", "Juni", "Juli", "Agustus", "September", "Oktober", "November", "Desember"];
+}
+
+function getMonthName(month) {
+    return getMonthNames()[month];
+}
+
+function formatMoney(n, c, d, t) {
+    var c = isNaN(c = Math.abs(c)) ? 2 : c,
+        d = d == undefined ? "." : d,
+        t = t == undefined ? "," : t,
+        s = n < 0 ? "-" : "",
+        i = String(parseInt(n = Math.abs(Number(n) || 0).toFixed(c))),
+        j = (j = i.length) > 3 ? j % 3 : 0;
+
+    return s + (j ? i.substr(0, j) + t : "") + i.substr(j).replace(/(\d{3})(?=\d)/g, "$1" + t) + (c ? d + Math.abs(n - i).toFixed(c).slice(2) : "");
+};
