@@ -104,3 +104,7 @@ function searchByEmail() {
         });
     }
 }
+
+function backKey() {
+    window.location.href = "home.html";
+}

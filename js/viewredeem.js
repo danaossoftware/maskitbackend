@@ -32,3 +32,7 @@ $(document).ready(function() {
         }
     });
 });
+
+function backKey() {
+    window.location.href = "redeems.html";
+}
