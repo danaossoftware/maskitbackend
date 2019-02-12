@@ -36,3 +36,7 @@ $(document).ready(function() {
 function backKey() {
     window.location.href = "redeems.html";
 }
+
+function backToRedeems() {
+    window.location.href = "redeems.html";
+}
