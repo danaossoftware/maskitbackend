@@ -1,6 +1,9 @@
 var serials;
 var currentSerial = 0;
 var selectedSerial = 0;
+var serialMenuShown = false;
+var editSerialDialogShown = false;
+var confirmDialogShown = false;
 
 $(document).ready(function() {
     getSerials();
@@ -35,10 +38,14 @@ function getSerials() {
 
 function setSerialClickListener() {
     $(".serial").unbind().on("click", function() {
-        $("#edit-serial").css("display", "flex").hide().fadeIn(500);
+        $("#serial-menu").css("display", "flex").hide().fadeIn(500);
         var index = $(this).parent().children().index(this);
         selectedSerial = index;
     });
+}
+
+function closeSerialMenuDialog() {
+    $("#serial-menu").fadeOut(500);
 }
 
 function editSerial() {
@@ -46,6 +53,7 @@ function editSerial() {
     $("#edit-serial-title").html("Edit Kode Serial");
     $("#serial").val("");
     $("#edit-serial").css("display", "flex");
+    editSerialDialogShown = true;
     $("#edit-serial-ok").on("click", function() {
         var serial = $("#serial").val();
         if (serial == "") {
@@ -89,6 +97,7 @@ function editSerial() {
     });
     $("#edit-serial-cancel").on("click", function() {
         $("#edit-serial").fadeOut(500);
+        editSerialDialogShown = false;
     });
 }
 
@@ -98,6 +107,7 @@ function deleteSerial() {
     $("#confirm-desc").html("Apakah Anda yakin ingin menghapus kode serial ini?");
     $("#confirm-ok").unbind().on("click", function() {
         $("#confirm-container").hide();
+        confirmDialogShown = false;
         $("#loading-text").html("Menghapus kode serial...");
         $("#loading-container").css("display", "flex").hide().fadeIn(500);
         $.ajax({
@@ -116,14 +126,17 @@ function deleteSerial() {
     });
     $("#confirm-cancel").unbind().on("click", function() {
         $("#confirm-container").fadeOut(500);
+        confirmDialogShown = false;
     });
     $("#confirm-container").css("display", "flex");
+    confirmDialogShown = true;
 }
 
 function addSerial() {
     $("#edit-serial-title").html("Tambah Kode Serial");
     $("#serial").val("");
     $("#edit-serial").css("display", "flex").hide().fadeIn(500);
+    editSerialDialogShown = true;
     $("#edit-serial-ok").on("click", function() {
         var serial = $("#serial").val();
         if (serial == "") {
@@ -156,9 +169,26 @@ function addSerial() {
     });
     $("#edit-serial-cancel").on("click", function() {
         $("#edit-serial").fadeOut(500);
+        editSerialDialogShown = false;
     });
 }
 
 function nextSerials() {
     getSerials();
+}
+
+function backKey() {
+    if (menuShown) {
+        closeMenu();
+    } else if (serialMenuShown) {
+        closeSerialMenuDialog();
+    } else if (editSerialDialogShown) {
+        $("#edit-serial").hide();
+        editSerialDialogShown = false;
+    } else if (confirmDialogShown) {
+        $("#confirm-container").hide();
+        confirmDialogShown = false;
+    } else {
+        Native.finishApp();
+    }
 }
