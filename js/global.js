@@ -45,8 +45,12 @@ function openUsers() {
     window.location.href = "users.html";
 }
 
-function openSerialNumbers() {
+function openMasks() {
     window.location.href = "masks.html";
+}
+
+function openSerialNumbers() {
+    window.location.href = "serials.html";
 }
 
 function openRedeems() {
