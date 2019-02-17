@@ -1,6 +1,7 @@
 <?php
 include 'db.php';
-$results = $c->query("SELECT * FROM serials");
+$start = $_GET["start"];
+$results = $c->query("SELECT * FROM serials LIMIT " . $start . ", 10");
 $serials = [];
 if ($results && $results->num_rows > 0) {
     while ($row = $results->fetch_assoc()) {

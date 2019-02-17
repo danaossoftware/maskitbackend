@@ -1,14 +1,15 @@
 var serials;
+var currentSerial = 0;
 
 $(document).ready(function() {
     getSerials();
 });
 
 function getSerials() {
-    $("#serials").find("*").remove();
     $.ajax({
         type: 'GET',
         url: SERVER_URL+'get-serials.php',
+        data: {'start': currentSerial},
         dataType: 'text',
         cache: false,
         success: function(a) {
@@ -16,6 +17,7 @@ function getSerials() {
                 // No serial
             } else {
                 serials = JSON.parse(a);
+                currentSerial += 10;
                 for (var i=0; i<serials.length; i++) {
                     var serial = serials[i];
                     $("#serials").append(""+
@@ -69,6 +71,8 @@ function setSerialClickListener() {
                             success: function(a) {
                                 $("#loading-container").fadeOut(500);
                                 show("Kode serial disimpan");
+                                $("#serials").find("*").remove();
+                                currentSerial = 0;
                                 getSerials();
                             }
                         });
@@ -106,6 +110,8 @@ function addSerial() {
                 if (a == 0) {
                     $("#loading-container").fadeOut(500);
                     show("Kode serial ditambah");
+                    $("#serials").find("*").remove();
+                    currentSerial = 0;
                     getSerials();
                 } else if (a == -1) {
                     $("#loading-container").fadeOut(500);
@@ -117,4 +123,8 @@ function addSerial() {
     $("#edit-serial-cancel").on("click", function() {
         $("#edit-serial").fadeOut(500);
     });
+}
+
+function nextSerials() {
+    getSerials();
 }
