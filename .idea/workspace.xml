@@ -2,18 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8db4b718-4fbf-4e28-8c7c-9643661ce24f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/js/serials.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/php/add-serial.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/php/check-serial.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/php/edit-serial.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/serials.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/php/get-serials.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admins.html" beforeDir="false" afterPath="$PROJECT_DIR$/admins.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/diseases.html" beforeDir="false" afterPath="$PROJECT_DIR$/diseases.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/home.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/global.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/global.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/mask.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/masks.html" beforeDir="false" afterPath="$PROJECT_DIR$/masks.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/redeems.html" beforeDir="false" afterPath="$PROJECT_DIR$/redeems.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/serials.html" beforeDir="false" afterPath="$PROJECT_DIR$/serials.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/statistics.html" beforeDir="false" afterPath="$PROJECT_DIR$/statistics.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/users.html" beforeDir="false" afterPath="$PROJECT_DIR$/users.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/viewredeem.html" beforeDir="false" afterPath="$PROJECT_DIR$/viewredeem.html" afterDir="false" />
@@ -29,8 +26,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/masks.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="82" lean-forward="true" selection-end-line="166" selection-end-column="7" />
+            <state relative-caret-position="1394">
+              <caret line="82" selection-end-line="166" selection-end-column="7" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -86,11 +83,10 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/serials.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="83" selection-start-line="83" selection-end-line="83" />
+            <state>
               <folding>
                 <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -116,7 +112,6 @@
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#11;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -138,13 +133,21 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/serials.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="27" column="2" selection-start-line="27" selection-start-column="2" selection-end-line="27" selection-end-column="2" />
+            <state relative-caret-position="170">
+              <caret line="10" column="21" lean-forward="true" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
               <folding>
-                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/php/get-serials.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="9" column="27" selection-start-line="9" selection-start-column="27" selection-end-line="9" selection-end-column="27" />
             </state>
           </provider>
         </entry>
@@ -171,7 +174,7 @@
         <entry file="file://$PROJECT_DIR$/php/check-serial.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="85">
-              <caret line="5" column="1" lean-forward="true" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
+              <caret line="5" column="1" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -180,9 +183,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>opengift</find>
-      <find>openred</find>
-      <find>openserial</find>
       <find>user-name</find>
       <find>format</find>
       <find>height</find>
@@ -210,6 +210,9 @@
       <find>edit-serial</find>
       <find>serial</find>
       <find>addserial</find>
+      <find>&lt;img src=&quot;img/coupon.png&quot; width=&quot;20px&quot; height=&quot;20px&quot; style=&quot;margin-left: 20px;&quot;&gt;</find>
+      <find>&lt;img src=&quot;img/mask.png&quot; width=&quot;20px&quot; height=&quot;20px&quot; style=&quot;margin-left: 20px;&quot;&gt;</find>
+      <find>mask.png</find>
     </findStrings>
     <replaceStrings>
       <replace>dmentor.id</replace>
@@ -230,6 +233,8 @@
       <replace>sainsgo.com</replace>
       <replace>localhost</replace>
       <replace>openMasks</replace>
+      <replace>&lt;img src=&quot;img/mask-2.png&quot; width=&quot;20px&quot; height=&quot;20px&quot; style=&quot;margin-left: 20px;&quot;&gt;</replace>
+      <replace>&lt;img src=&quot;img/coupon.png&quot; width=&quot;20px&quot; height=&quot;20px&quot; style=&quot;margin-left: 20px;&quot;&gt;</replace>
     </replaceStrings>
     <dirStrings>
       <dir>C:\Users\Dana\Documents\WebFiles\maskitbackend</dir>
@@ -244,7 +249,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/php/upload-file.php" />
         <option value="$PROJECT_DIR$/php/logout.php" />
         <option value="$PROJECT_DIR$/php/db.php" />
         <option value="$PROJECT_DIR$/php/common.php" />
@@ -290,11 +294,12 @@
         <option value="$PROJECT_DIR$/users.html" />
         <option value="$PROJECT_DIR$/viewredeem.html" />
         <option value="$PROJECT_DIR$/masks.html" />
-        <option value="$PROJECT_DIR$/serials.html" />
         <option value="$PROJECT_DIR$/php/check-serial.php" />
         <option value="$PROJECT_DIR$/php/edit-serial.php" />
         <option value="$PROJECT_DIR$/php/add-serial.php" />
         <option value="$PROJECT_DIR$/js/serials.js" />
+        <option value="$PROJECT_DIR$/serials.html" />
+        <option value="$PROJECT_DIR$/php/get-serials.php" />
       </list>
     </option>
   </component>
@@ -408,18 +413,19 @@
       <workItem from="1549999282271" duration="664000" />
       <workItem from="1550065737067" duration="180000" />
       <workItem from="1550331500228" duration="684000" />
-      <workItem from="1550425791036" duration="1473000" />
+      <workItem from="1550425791036" duration="1790000" />
+      <workItem from="1550427648516" duration="219000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="48100000" />
+    <option name="totallyTimeSpent" value="48636000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.408472" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.41452345" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -465,13 +471,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/js/statistics.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="680">
-          <caret line="40" column="9" selection-start-line="40" selection-start-column="9" selection-end-line="40" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/login.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
@@ -1038,8 +1037,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/masks.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="82" lean-forward="true" selection-end-line="166" selection-end-column="7" />
+        <state relative-caret-position="1394">
+          <caret line="82" selection-end-line="166" selection-end-column="7" />
           <folding>
             <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -1094,10 +1093,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/php/check-serial.php">
+    <entry file="file://$PROJECT_DIR$/php/add-serial.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="1" lean-forward="true" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
+        <state relative-caret-position="153">
+          <caret line="9" column="7" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
         </state>
       </provider>
     </entry>
@@ -1108,29 +1107,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/php/add-serial.php">
+    <entry file="file://$PROJECT_DIR$/php/check-serial.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="7" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/serials.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="27" column="2" selection-start-line="27" selection-start-column="2" selection-end-line="27" selection-end-column="2" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="85">
+          <caret line="5" column="1" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/serials.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="83" selection-start-line="83" selection-end-line="83" />
+        <state>
           <folding>
             <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -1156,7 +1142,6 @@
             <element signature="n#style#0;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#11;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -1171,6 +1156,24 @@
             <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#6;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#2;n#div#0;n#div#6;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/serials.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="21" lean-forward="true" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/php/get-serials.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="27" selection-start-line="9" selection-start-column="27" selection-end-line="9" selection-end-column="27" />
         </state>
       </provider>
     </entry>
