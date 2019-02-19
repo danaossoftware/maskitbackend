@@ -2,4 +2,5 @@
 include 'db.php';
 $id = $_POST["id"];
 $serial = $_POST["serial"];
-$c->query("UPDATE serials SET serial='" . $serial . "' WHERE id='" . $id . "'");
+$type = $_POST["type"];
+$c->query("UPDATE serials SET serial='" . $serial . "', type='" . $type . "' WHERE id='" . $id . "'");

@@ -93,7 +93,7 @@
     </div>
 </div>
 <div id="edit-serial" style="z-index: 4000; position: fixed; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, .5); display: none; justify-content: center; align-items: center;">
-    <div style="width: calc(100% - 60px); height: calc(100% - 40px); margin-top: 20px; margin-bottom: 20px; margin-left: 30px; margin-right: 30px; border-radius: 10px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .5); background-color: white; display: flex; flex-flow: column nowrap; overflow-y: scroll;">
+    <div style="width: calc(100% - 60px); margin-top: 20px; margin-bottom: 20px; margin-left: 30px; margin-right: 30px; border-radius: 10px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .5); background-color: white; display: flex; flex-flow: column nowrap; overflow-y: scroll;">
         <div style="width: 100%; display: flex; justify-content: center;">
             <div id="edit-serial-title" style="color: black; font-size: 18px; font-weight: bold;">Edit Serial</div>
         </div>
@@ -101,6 +101,13 @@
             Kode serial:
         </div>
         <input type="text" class="flat-input-2" id="serial">
+        <div style="width: calc(100% - 40px); padding-left: 20px; padding-right: 20px; height: 40px; display: flex; align-items: center;">
+            Tipe kode serial:
+        </div>
+        <form action="" style="margin-left: 10px;">
+            <input type="radio" id="type-mask">Masker
+            <input type="radio" id="type-filter">Filter
+        </form>
         <div style="width: 100%; display: flex; flex-flow: row nowrap; justify-content: flex-end; margin-bottom: 20px;">
             <button id="edit-serial-cancel" class="flat-button-2">Batal</button>
             <button id="edit-serial-ok" class="flat-button-2">OK</button>
