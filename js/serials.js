@@ -39,6 +39,7 @@ function getSerials() {
 function setSerialClickListener() {
     $(".serial").unbind().on("click", function () {
         $("#serial-menu").css("display", "flex").hide().fadeIn(500);
+        serialMenuShown = true;
         var index = $(this).parent().children().index(this);
         selectedSerial = index;
     });
@@ -46,9 +47,12 @@ function setSerialClickListener() {
 
 function closeSerialMenuDialog() {
     $("#serial-menu").fadeOut(500);
+    serialMenuShown = false;
 }
 
 function editSerial() {
+    $("#serial-menu").hide();
+    serialMenuShown = false;
     $("#loading-text").html("Memuat...");
     $("#loading-container").css("display", "flex");
     var serialObj = serials[selectedSerial];
@@ -90,7 +94,8 @@ function editSerial() {
             cache: false,
             success: function (a) {
                 $("#loading-container").fadeOut(500);
-                show("Kode serial disimpan");
+                showToast("Kode serial disimpan");
+                $("#edit-serial").fadeOut(300);
                 $("#serials").find("*").remove();
                 currentSerial = 0;
                 getSerials();
@@ -189,13 +194,15 @@ function addSerial() {
             contentType: false,
             cache: false,
             success: function (a) {
-                if (a == 0) {
+                var response = parseInt(a);
+                if (response == 0) {
                     $("#loading-container").fadeOut(500);
-                    show("Kode serial ditambah");
+                    showToast("Kode serial ditambah");
                     $("#serials").find("*").remove();
+                    $("#edit-serial").fadeOut(300);
                     currentSerial = 0;
                     getSerials();
-                } else if (a == -1) {
+                } else if (response == -1) {
                     $("#loading-container").fadeOut(500);
                     show("Tidak bisa menambahkan kode serial karena sudah digunakan");
                 }
