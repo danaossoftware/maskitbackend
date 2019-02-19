@@ -170,11 +170,12 @@ function addSerial() {
     $("#type-filter").prop("checked", false);
     $("#edit-serial").css("display", "flex").hide().fadeIn(500);
     editSerialDialogShown = true;
-    $("#edit-serial-ok").on("click", function () {
+    $("#edit-serial-ok").unbind().on("click", function () {
         var serial = $("#serial").val();
         if (serial == "") {
             return;
         }
+        Native.log("Serial: "+serial);
         $("#loading-text").html("Menambah kode serial...");
         $("#loading-container").css("display", "flex").hide().fadeIn(500);
         var fd = new FormData();
@@ -194,6 +195,7 @@ function addSerial() {
             contentType: false,
             cache: false,
             success: function (a) {
+                Native.log("Response: "+a);
                 var response = parseInt(a);
                 if (response == 0) {
                     $("#loading-container").fadeOut(500);
