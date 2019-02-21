@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8db4b718-4fbf-4e28-8c7c-9643661ce24f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/masks.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/masks.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/masks.html" beforeDir="false" afterPath="$PROJECT_DIR$/masks.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/php/add-mask.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/add-mask.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/php/save-mask-info.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/save-mask-info.php" afterDir="false" />
-    </list>
+    <list default="true" id="8db4b718-4fbf-4e28-8c7c-9643661ce24f" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -205,7 +199,7 @@
         <entry file="file://$PROJECT_DIR$/php/save-mask-info.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="170">
-              <caret line="10" column="87" lean-forward="true" selection-start-line="10" selection-start-column="87" selection-end-line="10" selection-end-column="87" />
+              <caret line="10" column="23" selection-start-line="10" selection-start-column="23" selection-end-line="10" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -455,15 +449,15 @@
       <workItem from="1550731901748" duration="1818000" />
       <workItem from="1550733781934" duration="1072000" />
       <workItem from="1550735609216" duration="411000" />
-      <workItem from="1550764895422" duration="136000" />
+      <workItem from="1550764895422" duration="472000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="58976000" />
+    <option name="totallyTimeSpent" value="59312000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.47806355" />
@@ -1207,7 +1201,7 @@
     <entry file="file://$PROJECT_DIR$/php/save-mask-info.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
-          <caret line="10" column="87" lean-forward="true" selection-start-line="10" selection-start-column="87" selection-end-line="10" selection-end-column="87" />
+          <caret line="10" column="23" selection-start-line="10" selection-start-column="23" selection-end-line="10" selection-end-column="23" />
         </state>
       </provider>
     </entry>
