@@ -244,13 +244,3 @@ function backKey() {
         Native.finishApp();
     }
 }
-
-function uploadXLS() {
-    if (isAndroid()) {
-        Native.selectXLSFile(1);
-    }
-}
-
-function xlsFileUploaded() {
-    getMasks();
-}

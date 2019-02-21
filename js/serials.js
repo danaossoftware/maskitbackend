@@ -10,6 +10,7 @@ $(document).ready(function () {
 });
 
 function getSerials() {
+    $("#serials").find("*").remove();
     $.ajax({
         type: 'GET',
         url: SERVER_URL + 'get-serials.php',
@@ -235,4 +236,14 @@ function backKey() {
     } else {
         Native.finishApp();
     }
+}
+
+function uploadXLS() {
+    if (isAndroid()) {
+        Native.selectXLSFile(1);
+    }
+}
+
+function xlsFileUploaded() {
+    getSerials();
 }
