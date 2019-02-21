@@ -69,8 +69,6 @@ function editMask() {
                 $("#mask-price").val(mask["price"]);
                 $("#minimum-points").val(rewardInfo["points"]);
                 $("#mask-desc").val(mask["descr"]);
-                $("#mask-serial").val(mask["mask_code"]);
-                $("#filter-serial").val(mask["filter_code"]);
                 $("#mask-link").val(mask["link"]);
                 maskImgURL = mask["img_url"];
                 $("#mask-img").attr("src", maskImgURL);
@@ -106,10 +104,8 @@ function saveMaskInfo() {
     var price = $("#mask-price").val();
     var minimumPoints = $("#minimum-points").val();
     var desc = $("#mask-desc").val();
-    var maskSerial = $("#mask-serial").val();
-    var filterSerial = $("#filter-serial").val();
     var link = $("#mask-link").val();
-    if (name == "" || price == "" || minimumPoints == "" || maskSerial == "" || filterSerial == "" || link == "") {
+    if (name == "" || price == "" || minimumPoints == "" || link == "") {
         showToast("Mohon masukkan semua data");
         return;
     }
@@ -120,8 +116,6 @@ function saveMaskInfo() {
     fd.append("price", parseInt(price));
     fd.append("points", parseInt(minimumPoints));
     fd.append("desc", desc);
-    fd.append("mask_serial", maskSerial);
-    fd.append("filter_serial", filterSerial);
     fd.append("link", link);
     fd.append("img_url", maskImgURL);
     fd.append("mask_id", maskId);
@@ -155,8 +149,6 @@ function addMask() {
     $("#mask-price").val("");
     $("#minimum-points").val("");
     $("#mask-desc").val("");
-    $("#mask-serial").val("");
-    $("#filter-serial").val("");
     $("#mask-link").val("");
     $("#edit-mask").css("display", "flex");
     editMaskDialogShown = true;
@@ -166,10 +158,8 @@ function addMask() {
         var price = $("#mask-price").val();
         var minimumPoints = $("#minimum-points").val();
         var desc = $("#mask-desc").val();
-        var maskSerial = $("#mask-serial").val();
-        var filterSerial = $("#filter-serial").val();
         var link = $("#mask-link").val();
-        if (name == "" || price == "" || minimumPoints == "" || maskSerial == "" || filterSerial == "" || link == "") {
+        if (name == "" || price == "" || minimumPoints == "" || link == "") {
             showToast("Mohon masukkan semua data");
             return;
         }
@@ -180,8 +170,6 @@ function addMask() {
         fd.append("price", parseInt(price));
         fd.append("points", parseInt(minimumPoints));
         fd.append("desc", desc);
-        fd.append("mask_serial", maskSerial);
-        fd.append("filter_serial", filterSerial);
         fd.append("link", link);
         fd.append("img_url", maskImgURL);
         post(SERVER_URL + 'add-mask.php', fd, function (a) {
