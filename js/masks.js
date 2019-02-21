@@ -5,7 +5,7 @@ var maskMenuShown = false;
 var editMaskDialogShown = false;
 var confirmDialogShown = false;
 
-$(document).ready(function() {
+$(document).ready(function () {
     getMasks();
 });
 
@@ -13,24 +13,24 @@ function getMasks() {
     $("#loading-text").html("Memuat...");
     $("#loading-container").css("display", "flex");
     $("#masks").find("*").remove();
-    get(SERVER_URL+'get-masks.php', null, function(a) {
+    get(SERVER_URL + 'get-masks.php', null, function (a) {
         masks = JSON.parse(a);
-        for (var i=0; i<masks.length; i++) {
+        for (var i = 0; i < masks.length; i++) {
             var mask = masks[i];
-            $("#masks").append(""+
+            $("#masks").append("" +
                 "<div class='mask' style='width: 250px; border-radius: 10px; box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .5); background-color: white; display: flex; flex-flow: column nowrap; margin-top: 10px; cursor: pointer;'>" +
                 "<div style='border-top-left-radius: 10px; border-top-right-radius: 10px; width: 100%; height: 150px; display: flex; justify-content: center; align-items: center;'>" +
-                "<img src='"+mask["img_url"]+"' width='130px' height='130px'>"+
-                "</div>"+
+                "<img src='" + mask["img_url"] + "' width='130px' height='130px'>" +
+                "</div>" +
                 "<div style='position: relative; height: 30px;'>" +
-                "<div style='position: absolute; left: 0; top: 0; font-weight: bold; color: black; margin-left: 10px; margin-right: 30px;'>"+mask["name"]+"</div>"+
+                "<div style='position: absolute; left: 0; top: 0; font-weight: bold; color: black; margin-left: 10px; margin-right: 30px;'>" + mask["name"] + "</div>" +
                 "<div style='position: absolute; top: 0; right: 0; width: 25px; height: 100%; display: flex; justify-content: center; align-items: center;'>" +
-                "<img src='img/edit.png' width='15px' height='15px'>"+
-                "       </div>"+
-                "</div>"+
+                "<img src='img/edit.png' width='15px' height='15px'>" +
+                "       </div>" +
+                "</div>" +
                 "<div style='width: 100%; display: flex; flex-flow: row nowrap; justify-content: flex-end;'>" +
-                "<div style='color: #e74c3c; margin-right: 10px; margin-bottom: 5px;'>Rp "+mask["price"]+"</div>"+
-                "</div>"+
+                "<div style='color: #e74c3c; margin-right: 10px; margin-bottom: 5px;'>Rp " + mask["price"] + "</div>" +
+                "</div>" +
                 "</div>"
             );
         }
@@ -40,7 +40,7 @@ function getMasks() {
 }
 
 function setMaskClickListener() {
-    $(".mask").unbind().on("click", function() {
+    $(".mask").unbind().on("click", function () {
         var index = $(this).parent().children().index(this);
         selectedMaskIndex = index;
         $("#mask-menu").css("display", "flex");
@@ -55,11 +55,11 @@ function editMask() {
     var maskId = mask["id"];
     $.ajax({
         type: 'GET',
-        url: SERVER_URL+'get-mask-info.php',
+        url: SERVER_URL + 'get-mask-info.php',
         data: {'mask_id': maskId},
         dataType: 'text',
         cache: false,
-        success: function(a) {
+        success: function (a) {
             Native.log(a);
             if (a < 0) {
                 // Error
@@ -77,10 +77,10 @@ function editMask() {
                 $("#edit-mask-title").html("Edit Masker");
                 $("#edit-mask").css("display", "flex");
                 editMaskDialogShown = true;
-                $("#edit-mask-ok").unbind().on("click", function() {
+                $("#edit-mask-ok").unbind().on("click", function () {
                     saveMaskInfo();
                 });
-                $("#edit-mask-cancel").unbind().on("click", function() {
+                $("#edit-mask-cancel").unbind().on("click", function () {
                     cancelEdittingMask();
                 });
                 $("#mask-menu").hide();
@@ -125,7 +125,7 @@ function saveMaskInfo() {
     fd.append("link", link);
     fd.append("img_url", maskImgURL);
     fd.append("mask_id", maskId);
-    post(SERVER_URL+'save-mask-info.php', fd, function(a) {
+    post(SERVER_URL + 'save-mask-info.php', fd, function (a) {
         $("#edit-mask").hide();
         editMaskDialogShown = false;
         $("#loading-container").hide();
@@ -144,6 +144,10 @@ function showLoadingDialog(message) {
     $("#loading-container").css("display", "flex");
 }
 
+function hideLoadingDialog(message) {
+    $("#loading-container").hide();
+}
+
 function addMask() {
     maskImgURL = "";
     $("#edit-mask-title").html("Tambah Masker");
@@ -157,7 +161,7 @@ function addMask() {
     $("#edit-mask").css("display", "flex");
     editMaskDialogShown = true;
     $("#mask-img").attr("src", "");
-    $("#edit-mask-ok").unbind().on("click", function() {
+    $("#edit-mask-ok").unbind().on("click", function () {
         var name = $("#mask-name").val();
         var price = $("#mask-price").val();
         var minimumPoints = $("#minimum-points").val();
@@ -180,14 +184,14 @@ function addMask() {
         fd.append("filter_serial", filterSerial);
         fd.append("link", link);
         fd.append("img_url", maskImgURL);
-        post(SERVER_URL+'add-mask.php', fd, function(a) {
+        post(SERVER_URL + 'add-mask.php', fd, function (a) {
             $("#edit-mask").hide();
             editMaskDialogShown = false;
             $("#loading-container").hide();
             getMasks();
         });
     });
-    $("#edit-mask-cancel").unbind().on("click", function() {
+    $("#edit-mask-cancel").unbind().on("click", function () {
         $("#edit-mask").hide();
         editMaskDialogShown = false;
         cancelEdittingMask();
@@ -197,7 +201,7 @@ function addMask() {
 function deleteMask() {
     $("#confirm-desc").html("Apakah Anda yakin ingin menghapus masker ini?");
     $("#confirm-title").html("Hapus Masker");
-    $("#confirm-ok").unbind().on("click", function() {
+    $("#confirm-ok").unbind().on("click", function () {
         $("#mask-menu").hide();
         maskMenuShown = false;
         $("#confirm-container").hide();
@@ -205,12 +209,12 @@ function deleteMask() {
         $("#loading-text").html("Menghapus masker...");
         $("#loading-container").css("display", "flex");
         var mask = masks[selectedMaskIndex];
-        get(SERVER_URL+'delete-mask.php', {'id': mask["id"]}, function(a) {
+        get(SERVER_URL + 'delete-mask.php', {'id': mask["id"]}, function (a) {
             $("#loading-container").hide();
             getMasks();
         });
     });
-    $("#confirm-cancel").unbind().on("click", function() {
+    $("#confirm-cancel").unbind().on("click", function () {
         $("#mask-menu").hide();
         maskMenuShown = false;
         $("#confirm-container").hide();
@@ -247,25 +251,6 @@ function uploadXLS() {
     }
 }
 
-function fileSelected(id, url) {
-    if (id == 1) {
-        Native.log("URL: "+url);
-        showLoadingDialog("Memuat file");
-        $.ajax({
-            type: 'GET',
-            url: url,
-            dataType: 'text',
-            cache: false,
-            success: function(data) {
-                var workbook = XLSX.read(data, {
-                    type: 'binary'
-                });
-                workbook.SheetNames.forEach(function(sheetName) {
-                    var XL_row_object = XLSX.utils.sheet_to_row_object_array(workbook.Sheets[sheetName]);
-                    var xlsJSON = JSON.stringify(XL_row_object);
-                    Native.log(xlsJSON);
-                });
-            }
-        });
-    }
+function xlsFileUploaded() {
+    getMasks();
 }
