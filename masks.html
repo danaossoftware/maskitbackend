@@ -4,6 +4,8 @@
     <script src="js/jquery.js"></script>
     <script src="js/global.js"></script>
     <script src="js/home.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.8.0/xlsx.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.8.0/jszip.js"></script>
     <script src="js/masks.js"></script>
     <link href="css/global.css" rel="stylesheet">
 </head>
@@ -19,6 +21,9 @@
             </div>
         </div>
         <div style="width: 100%; height: calc(100% - 50px); display: flex; flex-flow: column nowrap; margin-top: 60px;">
+            <div style="width: 100%; display: flex; justify-content: center;">
+                <button onclick="uploadXLS()" class="blue-button">Upload XLS</button>
+            </div>
             <div id="masks" style="display: flex; flex-flow: column nowrap; align-items: center; margin-bottom: 20px;"></div>
         </div>
     </div>

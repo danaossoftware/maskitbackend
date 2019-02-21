@@ -53,32 +53,40 @@ function editMask() {
     $("#loading-container").css("display", "flex");
     var mask = masks[selectedMaskIndex];
     var maskId = mask["id"];
-    get(SERVER_URL+'get-reward-info.php', {'mask-id': maskId}, function(a) {
-        if (a < 0) {
-            // Error
-        } else {
-            var rewardInfo = JSON.parse(a);
-            $("#mask-name").val(mask["name"]);
-            $("#mask-price").val(mask["price"]);
-            $("#minimum-points").val(rewardInfo["points"]);
-            $("#mask-desc").val(mask["descr"]);
-            $("#mask-serial").val(mask["mask_code"]);
-            $("#filter-serial").val(mask["filter_code"]);
-            $("#mask-link").val(mask["link"]);
-            maskImgURL = mask["img_url"];
-            $("#mask-img").attr("src", maskImgURL);
-            $("#edit-mask-title").html("Edit Masker");
-            $("#edit-mask").css("display", "flex");
-            editMaskDialogShown = true;
-            $("#edit-mask-ok").unbind().on("click", function() {
-                saveMaskInfo();
-            });
-            $("#edit-mask-cancel").unbind().on("click", function() {
-                cancelEdittingMask();
-            });
-            $("#mask-menu").hide();
-            maskMenuShown = false;
-            $("#loading-container").hide();
+    $.ajax({
+        type: 'GET',
+        url: SERVER_URL+'get-mask-info.php',
+        data: {'mask_id': maskId},
+        dataType: 'text',
+        cache: false,
+        success: function(a) {
+            Native.log(a);
+            if (a < 0) {
+                // Error
+            } else {
+                var rewardInfo = JSON.parse(a);
+                $("#mask-name").val(mask["name"]);
+                $("#mask-price").val(mask["price"]);
+                $("#minimum-points").val(rewardInfo["points"]);
+                $("#mask-desc").val(mask["descr"]);
+                $("#mask-serial").val(mask["mask_code"]);
+                $("#filter-serial").val(mask["filter_code"]);
+                $("#mask-link").val(mask["link"]);
+                maskImgURL = mask["img_url"];
+                $("#mask-img").attr("src", maskImgURL);
+                $("#edit-mask-title").html("Edit Masker");
+                $("#edit-mask").css("display", "flex");
+                editMaskDialogShown = true;
+                $("#edit-mask-ok").unbind().on("click", function() {
+                    saveMaskInfo();
+                });
+                $("#edit-mask-cancel").unbind().on("click", function() {
+                    cancelEdittingMask();
+                });
+                $("#mask-menu").hide();
+                maskMenuShown = false;
+                $("#loading-container").hide();
+            }
         }
     });
 }
@@ -230,5 +238,17 @@ function backKey() {
         confirmDialogShown = false;
     } else {
         Native.finishApp();
+    }
+}
+
+function uploadXLS() {
+    if (isAndroid()) {
+        Native.selectXLSFile(1);
+    }
+}
+
+function fileSelected(id, url) {
+    if (id == 1) {
+
     }
 }
