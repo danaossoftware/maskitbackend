@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8db4b718-4fbf-4e28-8c7c-9643661ce24f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/php/upload-serials.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/global.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/global.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/serials.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/serials.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/serials.html" beforeDir="false" afterPath="$PROJECT_DIR$/serials.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -15,11 +14,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/serials.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="495">
-              <caret line="254" column="17" selection-start-line="254" selection-start-column="17" selection-end-line="254" selection-end-column="17" />
+            <state relative-caret-position="410">
+              <caret line="255" column="5" selection-start-line="255" selection-start-column="5" selection-end-line="255" selection-end-column="5" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
@@ -28,11 +27,20 @@
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/js/global.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="220">
+              <caret line="67" column="68" lean-forward="true" selection-start-line="67" selection-start-column="68" selection-end-line="67" selection-end-column="68" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/php/upload-serials.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="119">
-              <caret line="7" column="1" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
+              <caret line="7" column="1" lean-forward="true" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -213,7 +221,6 @@
         <option value="$PROJECT_DIR$/php/add-serial.php" />
         <option value="$PROJECT_DIR$/php/edit-serial.php" />
         <option value="$PROJECT_DIR$/php/get-serial-info.php" />
-        <option value="$PROJECT_DIR$/js/global.js" />
         <option value="$PROJECT_DIR$/php/upload-file.php" />
         <option value="$PROJECT_DIR$/php/delete-all-serials.php" />
         <option value="$PROJECT_DIR$/masks.html" />
@@ -223,6 +230,7 @@
         <option value="$PROJECT_DIR$/serials.html" />
         <option value="$PROJECT_DIR$/php/upload-serials.php" />
         <option value="$PROJECT_DIR$/js/serials.js" />
+        <option value="$PROJECT_DIR$/js/global.js" />
       </list>
     </option>
   </component>
@@ -348,12 +356,12 @@
       <workItem from="1550735609216" duration="411000" />
       <workItem from="1550764895422" duration="1067000" />
       <workItem from="1550766782533" duration="599000" />
-      <workItem from="1550824950040" duration="752000" />
+      <workItem from="1550824950040" duration="1520000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="61258000" />
+    <option name="totallyTimeSpent" value="62026000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -895,13 +903,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/global.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2516">
-          <caret line="148" column="9" selection-start-line="148" selection-start-column="9" selection-end-line="148" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/php/get-reward-info.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
@@ -1080,18 +1081,25 @@
     <entry file="file://$PROJECT_DIR$/php/upload-serials.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
-          <caret line="7" column="1" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
+          <caret line="7" column="1" lean-forward="true" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/serials.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="254" column="17" selection-start-line="254" selection-start-column="17" selection-end-line="254" selection-end-column="17" />
+        <state relative-caret-position="410">
+          <caret line="255" column="5" selection-start-line="255" selection-start-column="5" selection-end-line="255" selection-end-column="5" />
           <folding>
             <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/global.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="67" column="68" lean-forward="true" selection-start-line="67" selection-start-column="68" selection-end-line="67" selection-end-column="68" />
         </state>
       </provider>
     </entry>

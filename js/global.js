@@ -65,9 +65,9 @@ function logout() {
 
 function showToast(text) {
     $("#toast-text").html(text);
-    $("#toast-container").css("display", "flex");
+    $("#toast-container").css("display", "flex").hide().fadeIn(300);
     setTimeout(function() {
-        $("#toast-container").hide();
+        $("#toast-container").fadeOut(300);
     }, 3000);
 }
 

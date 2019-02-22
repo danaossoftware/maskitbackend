@@ -18,6 +18,7 @@ function getSerials() {
         dataType: 'text',
         cache: false,
         success: function (a) {
+            Native.log("Serials: "+a);
             if (a < 0) {
                 // No serial
             } else {
@@ -252,5 +253,7 @@ function fileUploaded(id, url) {
 }
 
 function xlsFileUploaded() {
+    show("File diupload");
+    currentSerial = 0;
     getSerials();
 }
