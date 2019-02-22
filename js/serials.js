@@ -244,6 +244,13 @@ function uploadXLS() {
     }
 }
 
+function fileUploaded(id, url) {
+    if (id == 1) {
+        showLoadingDialog("Mengupload file...");
+
+    }
+}
+
 function xlsFileUploaded() {
     getSerials();
 }
