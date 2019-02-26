@@ -143,6 +143,7 @@ function hideLoadingDialog(message) {
 }
 
 function addMask() {
+	try {
     maskImgURL = "";
     $("#edit-mask-title").html("Tambah Masker");
     $("#mask-name").val("");
@@ -173,6 +174,7 @@ function addMask() {
         fd.append("link", link);
         fd.append("img_url", maskImgURL);
         post(SERVER_URL + 'add-mask.php', fd, function (a) {
+			console.log(a);
             $("#edit-mask").hide();
             editMaskDialogShown = false;
             $("#loading-container").hide();
@@ -180,10 +182,17 @@ function addMask() {
         });
     });
     $("#edit-mask-cancel").unbind().on("click", function () {
-        $("#edit-mask").hide();
-        editMaskDialogShown = false;
-        cancelEdittingMask();
+		try {
+			$("#edit-mask").hide();
+			editMaskDialogShown = false;
+			cancelEdittingMask();
+		} catch (e) {
+			console.log(e.toString());
+		}
     });
+	} catch (e) {
+		console.log(e.toString());
+	}
 }
 
 function deleteMask() {
