@@ -168,8 +168,8 @@ function addMask() {
         $("#loading-container").css("display", "flex");
         var fd = new FormData();
         fd.append("name", name);
-        fd.append("price", parseInt(price));
-        fd.append("points", parseInt(minimumPoints));
+        fd.append("price", price);
+        fd.append("points", minimumPoints);
         fd.append("desc", desc);
         fd.append("link", link);
         fd.append("img_url", maskImgURL);
