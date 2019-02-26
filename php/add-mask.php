@@ -1,8 +1,8 @@
 <?php
 include 'db.php';
 $name = $_POST["name"];
-$price = intval($_GET["price"]);
-$points = intval($_GET["points"]);
+$price = intval($_POST["price"]);
+$points = intval($_POST["points"]);
 $desc = $_POST["desc"];
 $link = $_POST["link"];
 $imgURL = $_POST["img_url"];
