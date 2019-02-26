@@ -1,3 +1,5 @@
+var currentIndex = 0;
+
 function login() {
     $("#error").hide();
     var email = $("#email").val();
