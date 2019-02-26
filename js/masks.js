@@ -160,7 +160,7 @@ function addMask() {
         var minimumPoints = $("#minimum-points").val();
         var desc = $("#mask-desc").val();
         var link = $("#mask-link").val();
-        if (name == "" || price == "" || minimumPoints == "" || link == "") {
+        if (name == "" || price == "" || minimumPoints == "") {
             showToast("Mohon masukkan semua data");
             return;
         }
